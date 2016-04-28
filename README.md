@@ -6,10 +6,11 @@ It uses [Browserify] to convert require modules for the browser
 This requires [npm] for running make sure to install the same.
 
 ### How to Run
-Clone or download as zip and extract. And, execute the following commands in root folder
+Clone or download as zip and extract. And, execute the following commands in root folder and navigate to <http://localhost:3000/> in browser
 ```sh
 $ npm install
 $ browserify index.js -o public/bundle.js -t [ babelify --presets [ es2015 react ] ]
+$ node app.js
 ```
 
 ### Version - 1.0.0

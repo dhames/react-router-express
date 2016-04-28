@@ -190,7 +190,7 @@ exports.default = _react2.default.createClass({
       _react2.default.createElement(
         'h1',
         null,
-        'React Router Tutorial'
+        'React Router Example'
       ),
       _react2.default.createElement(
         'ul',
@@ -239,20 +239,35 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = require('react-router');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react2.default.createClass({
   displayName: 'Home',
+  onClickButton: function onClickButton() {
+    _reactRouter.browserHistory.push('/home/about');
+  },
   render: function render() {
     return _react2.default.createElement(
       'div',
       null,
-      'Home'
+      _react2.default.createElement(
+        'div',
+        null,
+        'Home'
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        'Click on below button to go to about using browser push state'
+      ),
+      _react2.default.createElement('input', { type: 'button', onClick: this.onClickButton, value: 'Go to About' })
     );
   }
 });
 
-},{"react":224}],6:[function(require,module,exports){
+},{"react":224,"react-router":39}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
